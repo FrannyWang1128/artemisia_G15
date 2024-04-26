@@ -1,0 +1,17 @@
+<vxml version="2.1">
+  <menu>
+    <property name="inputmodes" value="dtmf"/>
+    <prompt>
+      Welcome to the seller interface.
+      <break time="500"/>
+      To check the current prices and quantities offered by farmers, please press 1.
+      <break time="1000"/>
+      To leave a message for a specific farmer, please press 2.
+      <break time="1000"/>
+      To return to the main menu, please press the asterisk key.
+    </prompt>
+    <choice dtmf="1" next="farmer_offers.xml"/>
+    <choice dtmf="2" next="leave_message.xml"/>
+    <choice dtmf="*" event="exit"/>
+  </menu>
+</vxml>
