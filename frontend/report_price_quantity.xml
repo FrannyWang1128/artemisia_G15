@@ -1,0 +1,17 @@
+<vxml version="2.1">
+    <form id="report_price_quantity_form">
+      <field name="farmer_id" type="digits">
+        <prompt>Please input the farmer id:</prompt>
+      </field>
+      <field name="quantity" type="digits">
+        <prompt>Please input the quantity:</prompt>
+      </field>
+      <field name="price" type="digits">
+        <prompt>Please input the price:</prompt>
+      </field>
+      <block>
+        <submit next="https://hard-hitting-straw.000webhostapp.com/backend/post_price_farmer/index.php" enctype="multipart/form-data" method="post" namelist="farmer_id price quantity"/>
+      </block>
+    </form>
+  </vxml>
+  

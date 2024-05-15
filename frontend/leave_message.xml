@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+    <form id="leave_message_form">
+        <field name="buyer_id" type="digits">
+            <prompt>Please input your buyer id </prompt>
+        </field>
+        <field name="farmer_id" type="digits">
+            <prompt>Please input the farmer id who u wanna buy from </prompt>
+        </field>
+        <field name="demand" type="digits">
+            <prompt>Please input the demand of artemisia</prompt>
+        </field>
+        <block>
+            <submit next="https://hard-hitting-straw.000webhostapp.com/backend/post_message/index.php" method="post" namelist="buyer_id farmer_id demand"/>
+        </block>
+    </form>
+    <menu id='menu'>
+        <property name="inputmodes" value="dtmf"/>
+        <prompt>
+            the messgae has been saved successfully.
+            <break time="500"/>
+            If u wanna go back to main page, please press pound sign.
+            <break time="1000"/>
+            If u wanna end the call, please press asterisk key.
+        </prompt>
+        <choice dtmf="#" next="http://webhosting.voxeo.net/209453/www/main.xml"/>
+        <choice dtmf="*" event="exit"/>
+    </menu>
+</vxml>

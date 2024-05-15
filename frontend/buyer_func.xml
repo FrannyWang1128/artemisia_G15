@@ -1,0 +1,20 @@
+<vxml version="2.1">
+  <menu>
+    <property name="inputmodes" value="dtmf"/>
+    <prompt>
+      Welcome to the seller interface.
+      <break time="500"/>
+      To check the current prices and quantities offered by farmers, please press 1.
+      <break time="1000"/>
+      To leave a message for a specific farmer, please press 2.
+      <break time="1000"/>
+      To return to the main menu, please press the pound sign.
+      <break time="1000"/>
+      To end the call, please press the asterisk key.
+    </prompt>
+    <choice dtmf="1" next="http://webhosting.voxeo.net/209453/www/get_artemisia_price.xml"/>
+    <choice dtmf="2" next="http://webhosting.voxeo.net/209453/www/leave_message.xml"/>
+    <choice dtmf="#" next="http://webhosting.voxeo.net/209453/www/main.xml"/>
+    <choice dtmf="*" event="exit"/>
+  </menu>
+</vxml>

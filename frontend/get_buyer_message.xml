@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+    <form id="search_messages_form">
+        <field name="farmer_id" type="digits">
+            <prompt>Please input your farmer id to search for messages</prompt>
+        </field>
+        <block>
+            <submit next="https://hard-hitting-straw.000webhostapp.com/backend/get_message/index.php" method="post" namelist="farmer_id"/>
+        </block>
+    </form>
+	
+</vxml>

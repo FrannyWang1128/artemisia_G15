@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<vxml version="2.1">
+  <form id="record_form">
+    <record name="user_recording" beep="true" maxtime="30s" finalsilence="3s" dtmfterm="true" type="audio/wav">
+      <prompt>Please record your message after the beep.</prompt>
+    </record>
+    <block>
+      <submit next="https://hard-hitting-straw.000webhostapp.com/backend/post_experience/save_recording.php" namelist="user_recording" method="post"/>
+    </block>
+  </form>
+</vxml>

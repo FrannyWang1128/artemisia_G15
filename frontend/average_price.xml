@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+    <form id = 'price_form'>
+        <block>
+            <data name="average_price" method="get" src="https://hard-hitting-straw.000webhostapp.com/backend/get_price/get_average_price.php" />
+        </block>
+        
+        <block id="price">
+        <foreach item="item" array="average_price">
+            <prompt>
+                <audio src="https://hard-hitting-straw.000webhostapp.com/wav/average_price.wav"/> <value expr="item.average_price"/>
+            </prompt>
+            <break time="2s"/>
+        </foreach>
+        <audio src="https://hard-hitting-straw.000webhostapp.com/wav/thank_use.wav"/>
+        </block>
+    </form>
+</vxml>

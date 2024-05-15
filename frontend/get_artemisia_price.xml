@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+    <form id = 'price_form'>
+        <block>
+            <data name="price_data" method="get" src="https://hard-hitting-straw.000webhostapp.com/backend/get_price/index.php" />
+        </block>
+        
+        <block id="price">
+        <foreach item="item" array="price_data">
+            <prompt>
+                The id of farmer is <value expr="item.farmer_id"/>
+                The Storage of artemisia is <value expr="item.storage"/> unit
+                The price of artemisia is <value expr="item.price"/> euros per unit
+            </prompt>
+        </foreach>
+        <prompt>These are prices from all the famers till now, thank u so much for using the platform!</prompt>
+        </block>
+    </form>
+</vxml>

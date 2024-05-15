@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1">
+  <form id="play_recordings">
+    <block>
+      <prompt>Here are your recordings:</prompt>
+      
+      <!-- 从 PHP 文件获取录音文件的 URL 列表 -->
+      <data name="recordingUrls" src="https://hard-hitting-straw.000webhostapp.com/backend/get_experience/play_experience.php" method="get" />
+
+      <prompt>Fetched data length: <value expr="recordingUrls.length" /></prompt>
+
+      <if cond="recordingUrls.length > 0">
+        <var name="firstAudioUrl" expr="recordingUrls[0].url" />
+        <prompt>Now playing the audio from URL</prompt>
+	<audio src="https://hard-hitting-straw.000webhostapp.com/wav/recordings/recording_1715720891.wav"/>
+      <else />
+        <prompt>I'm sorry, there was an error retrieving the recordings.</prompt>
+      </if>
+    </block>
+  </form>
+</vxml>
