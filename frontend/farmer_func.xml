@@ -20,6 +20,7 @@
     <choice dtmf="2" next="http://webhosting.voxeo.net/209453/www/report_price_quantity.xml"/>
     <choice dtmf="3" next="http://webhosting.voxeo.net/209453/www/share_experience.xml"/>
     <choice dtmf="4" next="http://webhosting.voxeo.net/209453/www/get_buyer_message.xml"/>
+    <choice dtmf="5" next="http://webhosting.voxeo.net/209453/www/get_experience.xml"/>
     <choice dtmf="#" next="http://webhosting.voxeo.net/209453/www/main.xml"/>
     <choice dtmf="*" event="exit"/>
   </menu>
